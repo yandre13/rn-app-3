@@ -1,0 +1,70 @@
+// import 'react-native-gesture-handler';
+
+// import React, { useContext, useEffect } from 'react';
+// import { createStackNavigator } from '@react-navigation/stack';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+// import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+// import AccountScreen from './src/screens/AccountScreen';
+// import SigninScreen from './src/screens/SigninScreen';
+// import SignupScreen from './src/screens/SignupScreen';
+// import TrackCreateScreen from './src/screens/TrackCreateScreen';
+
+// import TrackListNavigator from './navigators/TrackListNavigator';
+
+// import { Provider as AuthProvider, Context as AuthContext } from './src/context/AuthContext';
+
+// const Tab = createBottomTabNavigator();
+// const Stack = createStackNavigator();
+
+// const RootNavigation = () => {
+//   const { state } = useContext(AuthContext);
+
+//   return (
+//     <NavigationContainer theme={MyTheme}>
+//       {state.authToken != null ? (
+//         <Tab.Navigator initialRouteName='TrackListNavigator'>
+//           <Tab.Screen
+//             name="TrackCreate"
+//             component={TrackCreateScreen}
+//           />
+//           <Tab.Screen
+//             name="Account"
+//             component={AccountScreen}
+//           />
+//           <Tab.Screen
+//             name="TrackListNavigator"
+//             component={TrackListNavigator}
+//           />
+//         </Tab.Navigator>
+//       ) : (
+//         <Stack.Navigator initialRouteName='SignUp'>
+//           <Stack.Screen
+//             name="SignIn"
+//             component={SigninScreen}
+//           />
+//           <Stack.Screen
+//             name="SignUp"
+//             component={SignupScreen}
+//           />
+//         </Stack.Navigator>
+//       )}
+//     </NavigationContainer>
+//   )
+// }
+
+// const MyTheme = {
+//   ...DefaultTheme,
+//   colors: {
+//     ...DefaultTheme.colors,
+//     background: '#ffffff'
+//   }
+// };
+
+// export default function App() {
+//   return (
+//     <AuthProvider>
+//       <RootNavigation />
+//     </AuthProvider>
+//   )
+// }
